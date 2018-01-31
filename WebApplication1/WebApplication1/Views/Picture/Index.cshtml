@@ -1,0 +1,33 @@
+﻿@using WebApplication1.Models;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+    <a class="btn btn-primary" href="/Picture/Create">
+        Add Picture
+    </a>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>All Pictures</h2>
+
+    </div>
+</div>
+
+
+<div class="row">
+
+
+    @foreach (Picture pc in ViewBag.AllPictures)
+    {
+        <div class="col-md-3">
+            <img class="img-thumbnail" src="~/Uploads/Pictures/@pc.Name" />
+        </div>
+    }
+
+</div>
+
